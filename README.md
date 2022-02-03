@@ -85,7 +85,7 @@ Install 'sequelize-cli' & 'nodemon' as global packages, if you haven't yet.
 Nodemon:
 
 ```
-nom i nodemon
+npm i nodemon
 ```
 
 Per installare sequelize-cli bisogna installare prima Sequelize:
