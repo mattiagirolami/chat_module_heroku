@@ -146,7 +146,7 @@ const LoginForm = () => {
           errorMsg={errorMsg}
           clearErrorMsg={() => setErrorMsg(null)}
         />
-        <DemoCredsBox />
+        {/*<DemoCredsBox />*/}
       </div>
     </Container>
   );
