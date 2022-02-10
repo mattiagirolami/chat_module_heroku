@@ -59,9 +59,7 @@ const NavBar = () => {
                 <Typography variant="caption" color="secondary">
                   Made by
                   <Link
-                    href={
-                      "https://images2.corriereobjects.it/methode_image/socialshare/99c8e386-baa6-11e9-9682-c74c9096c983.jpg"
-                    }
+                    href={"https://www.taylorsoftware.it/cms/"}
                     color="inherit"
                     target="_blank"
                     rel="noopener"
