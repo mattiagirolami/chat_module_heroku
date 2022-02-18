@@ -3,8 +3,10 @@ const connectToDB = require('./db');
 const typeDefs = require('./graphql/typeDefs');
 const resolvers = require('./graphql/resolvers');
 const { PORT } = require('./utils/config');
+const express = require('express');
 const path = require('path');
 
+const app = express();
 
 connectToDB();
 
@@ -14,7 +16,13 @@ const server = new ApolloServer({
   context: (context) => context,
 });
 
-//----Deployment----
+app.use(express.static('public'));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
+
+/*----Deployment----
 
 const __dirname1 = path.resolve();
 
@@ -29,7 +37,7 @@ if (process.env.NODE_ENV === "production") {
     res.send("API is running..");
   });
 }
-//----Deployment----
+----Deployment----*/
 
 server.listen({ port: PORT }).then(({ url, subscriptionsUrl }) => {
   console.log(`Server ready at ${url}`);
