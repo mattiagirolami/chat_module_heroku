@@ -66,7 +66,7 @@ const LoginForm = () => {
     <Container>
       <div className={classes.root}>
         <Typography variant="h4" color="secondary" className={classes.title}>
-          Login to your <strong>LesChat!</strong> account
+          Login to your <strong>Let's Chat!</strong> account
         </Typography>
         <form onSubmit={handleSubmit(onLogin)} className={classes.form}>
           <div className={classes.inputField}>
